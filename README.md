@@ -1,5 +1,5 @@
 # bert-oversimplified
-A pure PyTorch implementation of BERT. 
+A pure PyTorch implementation of vanilla BERT. 
 
 Read the paper here: https://arxiv.org/abs/1810.04805
 
