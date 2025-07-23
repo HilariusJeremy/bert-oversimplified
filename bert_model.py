@@ -1,20 +1,8 @@
-import torch
+import torch, math, json
 import torch.nn as nn
-import math
 
-config = {
-    'vocab_size': 30522, 
-    'hidden_size': 768,                 # embedding dimension for each token index 
-    'max_position_embeddings':  512,    # max. sequence length
-    'pad_token_id': 0,                  # index of padding token in the vocabulary  
-    'type_vocab_size': 2,
-    'hidden_dropout_prob': 0.1,
-    'layer_norm_eps': 1e-12,
-    'num_attention_heads': 12,
-    'attention_probs_dropout_prob': 0.1,
-    'num_hidden_layers': 12,
-
-}
+with open("config.json", "r") as f:
+    config = json.load(f)
 
 class CustomBertEmbeddings(nn.Module):
     def __init__(self, config):
